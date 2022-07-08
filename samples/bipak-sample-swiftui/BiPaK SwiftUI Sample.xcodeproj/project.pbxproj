@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031D0B1328894A4A00455D5B /* BiPaK_SwiftUI_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D0B0328894A4600455D5B /* BiPaK_SwiftUI_SampleApp.swift */; };
+		031D0B1428894A4A00455D5B /* BiPaK_SwiftUI_SampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D0B0328894A4600455D5B /* BiPaK_SwiftUI_SampleApp.swift */; };
+		031D0B1528894A4A00455D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D0B0428894A4600455D5B /* ContentView.swift */; };
+		031D0B1628894A4A00455D5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031D0B0428894A4600455D5B /* ContentView.swift */; };
+		031D0B1728894A4A00455D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031D0B0528894A4A00455D5B /* Assets.xcassets */; };
+		031D0B1828894A4A00455D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 031D0B0528894A4A00455D5B /* Assets.xcassets */; };
+		0326AFC12889AB63003315AC /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0326AFC02889AB63003315AC /* KMPNativeCoroutinesCore */; };
+		0326AFC3288A90B4003315AC /* KMPNativeCoroutinesCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0326AFC2288A90B4003315AC /* KMPNativeCoroutinesCore */; };
+		0326AFC4288A91AF003315AC /* Pods_BiPaK_SwiftUI_Sample__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB479879E24CC234B4F6FF7C /* Pods_BiPaK_SwiftUI_Sample__macOS_.framework */; };
+		038AD023288AB4020065237E /* BiPaKSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AD022288AB4020065237E /* BiPaKSwift.swift */; };
+		038AD024288AB4020065237E /* BiPaKSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038AD022288AB4020065237E /* BiPaKSwift.swift */; };
+		93ABF2C31908364E253071E7 /* Pods_BiPaK_SwiftUI_Sample__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48669CCBC67164339270BB46 /* Pods_BiPaK_SwiftUI_Sample__iOS_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		031D0B0328894A4600455D5B /* BiPaK_SwiftUI_SampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiPaK_SwiftUI_SampleApp.swift; sourceTree = "<group>"; };
+		031D0B0428894A4600455D5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		031D0B0528894A4A00455D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		031D0B0A28894A4A00455D5B /* BiPaK SwiftUI Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BiPaK SwiftUI Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		031D0B1028894A4A00455D5B /* BiPaK SwiftUI Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BiPaK SwiftUI Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		031D0B1228894A4A00455D5B /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		031D0B2128894AC000455D5B /* BiPaK SwiftUI Sample (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BiPaK SwiftUI Sample (iOS).entitlements"; sourceTree = "<group>"; };
+		038AD022288AB4020065237E /* BiPaKSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiPaKSwift.swift; sourceTree = "<group>"; };
+		48669CCBC67164339270BB46 /* Pods_BiPaK_SwiftUI_Sample__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiPaK_SwiftUI_Sample__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		782202802C056F56F3DF4AAF /* Pods-BiPaK SwiftUI Sample (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiPaK SwiftUI Sample (macOS).release.xcconfig"; path = "Target Support Files/Pods-BiPaK SwiftUI Sample (macOS)/Pods-BiPaK SwiftUI Sample (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		9D49085A29E248724F78E1FE /* Pods-BiPaK SwiftUI Sample (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiPaK SwiftUI Sample (iOS).debug.xcconfig"; path = "Target Support Files/Pods-BiPaK SwiftUI Sample (iOS)/Pods-BiPaK SwiftUI Sample (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		A1E74F7708153CBF1B8BFD56 /* Pods-BiPaK SwiftUI Sample (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiPaK SwiftUI Sample (macOS).debug.xcconfig"; path = "Target Support Files/Pods-BiPaK SwiftUI Sample (macOS)/Pods-BiPaK SwiftUI Sample (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		CB479879E24CC234B4F6FF7C /* Pods_BiPaK_SwiftUI_Sample__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BiPaK_SwiftUI_Sample__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64ECEBCC9C1D85E1B866F69 /* Pods-BiPaK SwiftUI Sample (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiPaK SwiftUI Sample (iOS).release.xcconfig"; path = "Target Support Files/Pods-BiPaK SwiftUI Sample (iOS)/Pods-BiPaK SwiftUI Sample (iOS).release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		031D0B0728894A4A00455D5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0326AFC12889AB63003315AC /* KMPNativeCoroutinesCore in Frameworks */,
+				93ABF2C31908364E253071E7 /* Pods_BiPaK_SwiftUI_Sample__iOS_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031D0B0D28894A4A00455D5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0326AFC4288A91AF003315AC /* Pods_BiPaK_SwiftUI_Sample__macOS_.framework in Frameworks */,
+				0326AFC3288A90B4003315AC /* KMPNativeCoroutinesCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		031D0AFD28894A4500455D5B = {
+			isa = PBXGroup;
+			children = (
+				031D0B2128894AC000455D5B /* BiPaK SwiftUI Sample (iOS).entitlements */,
+				031D0B0228894A4600455D5B /* Shared */,
+				031D0B1128894A4A00455D5B /* macOS */,
+				031D0B0B28894A4A00455D5B /* Products */,
+				03FC59092889628C00B34500 /* Frameworks */,
+				9CB5E1ADD738F2A72CA02535 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		031D0B0228894A4600455D5B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				038AD022288AB4020065237E /* BiPaKSwift.swift */,
+				031D0B0328894A4600455D5B /* BiPaK_SwiftUI_SampleApp.swift */,
+				031D0B0428894A4600455D5B /* ContentView.swift */,
+				031D0B0528894A4A00455D5B /* Assets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		031D0B0B28894A4A00455D5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				031D0B0A28894A4A00455D5B /* BiPaK SwiftUI Sample.app */,
+				031D0B1028894A4A00455D5B /* BiPaK SwiftUI Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		031D0B1128894A4A00455D5B /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				031D0B1228894A4A00455D5B /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		03FC59092889628C00B34500 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48669CCBC67164339270BB46 /* Pods_BiPaK_SwiftUI_Sample__iOS_.framework */,
+				CB479879E24CC234B4F6FF7C /* Pods_BiPaK_SwiftUI_Sample__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CB5E1ADD738F2A72CA02535 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D49085A29E248724F78E1FE /* Pods-BiPaK SwiftUI Sample (iOS).debug.xcconfig */,
+				D64ECEBCC9C1D85E1B866F69 /* Pods-BiPaK SwiftUI Sample (iOS).release.xcconfig */,
+				A1E74F7708153CBF1B8BFD56 /* Pods-BiPaK SwiftUI Sample (macOS).debug.xcconfig */,
+				782202802C056F56F3DF4AAF /* Pods-BiPaK SwiftUI Sample (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		031D0B0928894A4A00455D5B /* BiPaK SwiftUI Sample (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031D0B1B28894A4A00455D5B /* Build configuration list for PBXNativeTarget "BiPaK SwiftUI Sample (iOS)" */;
+			buildPhases = (
+				24D9DFCB72E4538C9CD01C19 /* [CP] Check Pods Manifest.lock */,
+				031D0B0628894A4A00455D5B /* Sources */,
+				031D0B0728894A4A00455D5B /* Frameworks */,
+				031D0B0828894A4A00455D5B /* Resources */,
+				A86955DDFDA411A1D55F2629 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BiPaK SwiftUI Sample (iOS)";
+			packageProductDependencies = (
+				0326AFC02889AB63003315AC /* KMPNativeCoroutinesCore */,
+			);
+			productName = "BiPaK SwiftUI Sample (iOS)";
+			productReference = 031D0B0A28894A4A00455D5B /* BiPaK SwiftUI Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		031D0B0F28894A4A00455D5B /* BiPaK SwiftUI Sample (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031D0B1E28894A4A00455D5B /* Build configuration list for PBXNativeTarget "BiPaK SwiftUI Sample (macOS)" */;
+			buildPhases = (
+				FD28F2AD439E1FA4296D1694 /* [CP] Check Pods Manifest.lock */,
+				031D0B0C28894A4A00455D5B /* Sources */,
+				031D0B0D28894A4A00455D5B /* Frameworks */,
+				031D0B0E28894A4A00455D5B /* Resources */,
+				6B42437E9B5DD05C37F4831E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BiPaK SwiftUI Sample (macOS)";
+			packageProductDependencies = (
+				0326AFC2288A90B4003315AC /* KMPNativeCoroutinesCore */,
+			);
+			productName = "BiPaK SwiftUI Sample (macOS)";
+			productReference = 031D0B1028894A4A00455D5B /* BiPaK SwiftUI Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		031D0AFE28894A4500455D5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					031D0B0928894A4A00455D5B = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					031D0B0F28894A4A00455D5B = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 031D0B0128894A4600455D5B /* Build configuration list for PBXProject "BiPaK SwiftUI Sample" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 031D0AFD28894A4500455D5B;
+			packageReferences = (
+				0326AFBF2889AB63003315AC /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */,
+			);
+			productRefGroup = 031D0B0B28894A4A00455D5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				031D0B0928894A4A00455D5B /* BiPaK SwiftUI Sample (iOS) */,
+				031D0B0F28894A4A00455D5B /* BiPaK SwiftUI Sample (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		031D0B0828894A4A00455D5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031D0B1728894A4A00455D5B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031D0B0E28894A4A00455D5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031D0B1828894A4A00455D5B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24D9DFCB72E4538C9CD01C19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiPaK SwiftUI Sample (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B42437E9B5DD05C37F4831E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiPaK SwiftUI Sample (macOS)/Pods-BiPaK SwiftUI Sample (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiPaK SwiftUI Sample (macOS)/Pods-BiPaK SwiftUI Sample (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiPaK SwiftUI Sample (macOS)/Pods-BiPaK SwiftUI Sample (macOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86955DDFDA411A1D55F2629 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiPaK SwiftUI Sample (iOS)/Pods-BiPaK SwiftUI Sample (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BiPaK SwiftUI Sample (iOS)/Pods-BiPaK SwiftUI Sample (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BiPaK SwiftUI Sample (iOS)/Pods-BiPaK SwiftUI Sample (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD28F2AD439E1FA4296D1694 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BiPaK SwiftUI Sample (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		031D0B0628894A4A00455D5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031D0B1528894A4A00455D5B /* ContentView.swift in Sources */,
+				031D0B1328894A4A00455D5B /* BiPaK_SwiftUI_SampleApp.swift in Sources */,
+				038AD023288AB4020065237E /* BiPaKSwift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031D0B0C28894A4A00455D5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031D0B1628894A4A00455D5B /* ContentView.swift in Sources */,
+				031D0B1428894A4A00455D5B /* BiPaK_SwiftUI_SampleApp.swift in Sources */,
+				038AD024288AB4020065237E /* BiPaKSwift.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		031D0B1928894A4A00455D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		031D0B1A28894A4A00455D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		031D0B1C28894A4A00455D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D49085A29E248724F78E1FE /* Pods-BiPaK SwiftUI Sample (iOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BiPaK SwiftUI Sample (iOS).entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.haan.bipak.sample.BiPaK-SwiftUI-Sample";
+				PRODUCT_NAME = "BiPaK SwiftUI Sample";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		031D0B1D28894A4A00455D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D64ECEBCC9C1D85E1B866F69 /* Pods-BiPaK SwiftUI Sample (iOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "BiPaK SwiftUI Sample (iOS).entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.haan.bipak.sample.BiPaK-SwiftUI-Sample";
+				PRODUCT_NAME = "BiPaK SwiftUI Sample";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		031D0B1F28894A4A00455D5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1E74F7708153CBF1B8BFD56 /* Pods-BiPaK SwiftUI Sample (macOS).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.haan.bipak.sample.BiPaK-SwiftUI-Sample";
+				PRODUCT_NAME = "BiPaK SwiftUI Sample";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		031D0B2028894A4A00455D5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 782202802C056F56F3DF4AAF /* Pods-BiPaK SwiftUI Sample (macOS).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "fr.haan.bipak.sample.BiPaK-SwiftUI-Sample";
+				PRODUCT_NAME = "BiPaK SwiftUI Sample";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		031D0B0128894A4600455D5B /* Build configuration list for PBXProject "BiPaK SwiftUI Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031D0B1928894A4A00455D5B /* Debug */,
+				031D0B1A28894A4A00455D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031D0B1B28894A4A00455D5B /* Build configuration list for PBXNativeTarget "BiPaK SwiftUI Sample (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031D0B1C28894A4A00455D5B /* Debug */,
+				031D0B1D28894A4A00455D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031D0B1E28894A4A00455D5B /* Build configuration list for PBXNativeTarget "BiPaK SwiftUI Sample (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031D0B1F28894A4A00455D5B /* Debug */,
+				031D0B2028894A4A00455D5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0326AFBF2889AB63003315AC /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rickclephas/KMP-NativeCoroutines.git";
+			requirement = {
+				branch = v0.12.5;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0326AFC02889AB63003315AC /* KMPNativeCoroutinesCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0326AFBF2889AB63003315AC /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesCore;
+		};
+		0326AFC2288A90B4003315AC /* KMPNativeCoroutinesCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0326AFBF2889AB63003315AC /* XCRemoteSwiftPackageReference "KMP-NativeCoroutines" */;
+			productName = KMPNativeCoroutinesCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 031D0AFE28894A4500455D5B /* Project object */;
+}

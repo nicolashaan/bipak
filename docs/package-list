@@ -1,0 +1,9 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:bipak-android
+fr.haan.bipak.android
+module:bipak-compose-android
+fr.haan.bipak.compose
+module:bipak-core
+fr.haan.bipak

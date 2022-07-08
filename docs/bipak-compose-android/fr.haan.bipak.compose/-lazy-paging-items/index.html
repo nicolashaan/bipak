@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>LazyPagingItems</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>bipak-project</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="bipak-compose-android::fr.haan.bipak.compose/LazyPagingItems///PointingToDeclaration//-1627767285">
+  <div class="breadcrumbs"><a href="../../index.html">bipak-compose-android</a><span class="delimiter">/</span><a href="../index.html">fr.haan.bipak.compose</a><span class="delimiter">/</span><a href="index.html">LazyPagingItems</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Lazy</span><wbr><span>Paging</span><wbr><span><span>Items</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":bipak-compose-android:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">LazyPagingItems</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/State.html">State</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../bipak-core/fr.haan.bipak/-paging-data/index.html">PagingData</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The class responsible for accessing the data from a <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span> of <a href="../../../bipak-core/fr.haan.bipak/-paging-data/index.html">PagingData</a>. In order to obtain an instance of <a href="index.html">LazyPagingItems</a> use the <a href="../collect-as-lazy-paging-items.html">collectAsLazyPagingItems</a> extension method of <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span> with <a href="../../../bipak-core/fr.haan.bipak/-paging-data/index.html">PagingData</a>. This instance can be used by the <a href="../items.html">items</a> and <a href="../items-indexed.html">itemsIndexed</a> methods inside <a href="https://developer.android.com/reference/kotlin/androidx/compose/foundation/lazy/LazyListScope.html">LazyListScope</a> to display data received from the <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span> of <a href="../../../bipak-core/fr.haan.bipak/-paging-data/index.html">PagingData</a>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Parameters</h2>
+      <div data-togglable="Parameters">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":bipak-compose-android:dokkaHtmlPartial/release"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":bipak-compose-android:dokkaHtmlPartial/release" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>T</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the type of value used by <a href="../../../bipak-core/fr.haan.bipak/-paging-data/index.html">PagingData</a>.</p></div></div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-849907148%2FConstructors%2F-1627767285" anchor-label="LazyPagingItems" id="-849907148%2FConstructors%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a>
+        <div class="table-row" data-filterable-current=":bipak-compose-android:dokkaHtmlPartial/release" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-lazy-paging-items.html"><span>Lazy</span><wbr><span>Paging</span><wbr><span><span>Items</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-849907148%2FConstructors%2F-1627767285"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":bipak-compose-android:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">&gt; </span><a href="-lazy-paging-items.html"><span class="token function">LazyPagingItems</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">state<span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/State.html">State</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../bipak-core/fr.haan.bipak/-paging-data/index.html">PagingData</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1033988994%2FFunctions%2F-1627767285" anchor-label="retry" id="1033988994%2FFunctions%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a>
+        <div class="table-row" data-filterable-current=":bipak-compose-android:dokkaHtmlPartial/release" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="retry.html"><span><span>retry</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1033988994%2FFunctions%2F-1627767285"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":bipak-compose-android:dokkaHtmlPartial/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="retry.html"><span class="token function">retry</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Retry fetching data in case of error</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1185821502%2FProperties%2F-1627767285" anchor-label="eventFlow" id="-1185821502%2FProperties%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a>
+        <div class="table-row" data-filterable-current=":bipak-compose-android:dokkaHtmlPartial/release" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="event-flow.html"><span>event</span><wbr><span><span>Flow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1185821502%2FProperties%2F-1627767285"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":bipak-compose-android:dokkaHtmlPartial/release"><a data-name="-1185821502%2FProperties%2F-1627767285" anchor-label="eventFlow" id="-1185821502%2FProperties%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="event-flow.html">eventFlow</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/MutableSharedFlow///PointingToDeclaration/">MutableSharedFlow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../bipak-core/fr.haan.bipak/-paging-view-event/index.html">PagingViewEvent</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1185821502%2FProperties%2F-1627767285" anchor-label="eventFlow" id="-1185821502%2FProperties%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a><p class="paragraph">Flow of <a href="../../../bipak-core/fr.haan.bipak/-paging-view-event/index.html">PagingViewEvent</a> to be passed to the <a href="../../../bipak-core/fr.haan.bipak/-pager/index.html">fr.haan.bipak.Pager</a> instance</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-52671041%2FProperties%2F-1627767285" anchor-label="loadState" id="-52671041%2FProperties%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a>
+        <div class="table-row" data-filterable-current=":bipak-compose-android:dokkaHtmlPartial/release" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="load-state.html"><span>load</span><wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-52671041%2FProperties%2F-1627767285"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":bipak-compose-android:dokkaHtmlPartial/release"><a data-name="-52671041%2FProperties%2F-1627767285" anchor-label="loadState" id="-52671041%2FProperties%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="load-state.html">loadState</a><span class="token operator">: </span><a href="../../../bipak-core/fr.haan.bipak/-paging-data/-load-state/index.html">PagingData.LoadState</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-52671041%2FProperties%2F-1627767285" anchor-label="loadState" id="-52671041%2FProperties%2F-1627767285" data-filterable-set=":bipak-compose-android:dokkaHtmlPartial/release"></a><p class="paragraph">Current load state (can be used to display a load indicator)</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

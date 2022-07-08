@@ -1,0 +1,12 @@
+target 'BiPaK SwiftUI Sample (iOS)' do
+  use_frameworks!
+  platform :ios, '13'
+  # Pods for iosApp
+  pod 'bipak_sample_shared', :path => '../bipak-sample-shared'
+end
+
+target 'BiPaK SwiftUI Sample (macOS)' do
+  use_frameworks!
+  platform :macos, '11'
+  pod 'bipak_sample_shared', :path => '../bipak-sample-shared'
+end

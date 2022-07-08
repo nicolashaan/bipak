@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/design_default_color_background"
+    app:divider="@drawable/empty_tall_divider"
+    app:showDividers="middle"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+        android:background="@color/design_default_color_primary_dark" />
+
+    <TextView
+        android:id="@+id/text_item_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Page count: " />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/seekBar_item_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:valueFrom="0.0"
+        android:stepSize="1.0"
+        android:valueTo="1000" />
+
+    <TextView
+        android:id="@+id/text_page_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Page size: " />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/seekBar_page_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:valueFrom="0.0"
+        android:stepSize="1.0"
+        android:valueTo="100.0" />
+
+    <TextView
+        android:id="@+id/text_load_delay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Load delay:" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/seekBar_load_delay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:valueFrom="0.0"
+        android:stepSize="100.0"
+        android:valueTo="5000.0" />
+
+    <TextView
+        android:id="@+id/text_error_on"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Error on page: " />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_error"
+        android:inputType="number"
+        android:layout_marginStart="16dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_apply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply" />
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

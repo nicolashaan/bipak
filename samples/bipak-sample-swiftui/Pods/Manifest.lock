@@ -1,0 +1,16 @@
+PODS:
+  - bipak_sample_shared (1.0)
+
+DEPENDENCIES:
+  - bipak_sample_shared (from `../bipak-sample-shared`)
+
+EXTERNAL SOURCES:
+  bipak_sample_shared:
+    :path: "../bipak-sample-shared"
+
+SPEC CHECKSUMS:
+  bipak_sample_shared: b7a4e8dd363181f4942dc0aad4991f6bb915c426
+
+PODFILE CHECKSUM: 37a412719f046548eb8981685a7f165a3e4fa640
+
+COCOAPODS: 1.11.2

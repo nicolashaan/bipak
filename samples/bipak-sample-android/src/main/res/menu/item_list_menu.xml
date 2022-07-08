@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="fr.haan.bipak.sample.android.MainActivity">
+    <item
+        android:id="@+id/action_goto_compose"
+        android:orderInCategory="300"
+        android:title="Compose"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_goto_setup"
+        android:orderInCategory="300"
+        android:title="Setup"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_preferences" />
+
+
+</menu>
