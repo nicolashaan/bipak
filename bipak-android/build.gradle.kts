@@ -1,8 +1,14 @@
-
 plugins {
     id("com.android.library")
     kotlin("android")
     id("org.jetbrains.dokka")
+    id("maven-publish")
+    id("signing")
+}
+
+repositories {
+    mavenCentral()
+    google()
 }
 
 android {
@@ -34,6 +40,12 @@ android {
         jvmTarget = "1.8"
         freeCompilerArgs += "-Xexplicit-api=warning"
     }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
+
 }
 
 dependencies {
@@ -44,3 +56,51 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.4.2")
     implementation("com.google.android.material:material:1.6.1")
 }
+
+version = project.properties["VERSION_NAME"] ?: "SNAPSHOT"
+group = "fr.haan.bipak"
+
+signing {
+    sign(publishing.publications)
+}
+
+val javadocJar by tasks.creating(Jar::class) {
+    group = JavaBasePlugin.DOCUMENTATION_GROUP
+    description = "Assembles Javadoc JAR"
+    archiveClassifier.set("javadoc")
+    from(tasks.named("dokkaHtml"))
+}
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+
+            artifact(javadocJar)
+
+            pom {
+                name.set("BiPaK Android")
+                description.set("Android RecyclerView support for BiPaK")
+                url.set("https://github.com/nicolashaan/bipak")
+                licenses {
+                    license {
+                        name.set("BiPaK License")
+                        url.set("https://github.com/nicolashaan/bipak/blob/main/LICENCE.md")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("nicolashaan")
+                        name.set("Nicolas Haan")
+                    }
+                }
+
+                scm {
+                    connection.set("scm:git:github.com/nicolashaan/bipak.git")
+                    developerConnection.set("scm:git:ssh://github.com/nicolashaan/bipak.git")
+                    url.set("https://github.com/nicolashaan/bipak/tree/main")
+                }
+            }
+        }
+    }
+}
+

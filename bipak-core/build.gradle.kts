@@ -3,10 +3,8 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.dokka")
     id("maven-publish")
+    id("signing")
 }
-
-version = "1.0.0-rc1"
-group = "fr.haan.bipak"
 
 kotlin {
     explicitApi()
@@ -74,4 +72,49 @@ android {
         targetSdk = Versions.androidTargetSdk
     }
     namespace = "fr.haan.bipak"
+}
+
+version = project.properties["VERSION_NAME"] ?: "SNAPSHOT"
+group = "fr.haan.bipak"
+
+signing {
+    sign(publishing.publications)
+}
+
+val javadocJar by tasks.creating(Jar::class) {
+    group = JavaBasePlugin.DOCUMENTATION_GROUP
+    description = "Assembles Javadoc JAR"
+    archiveClassifier.set("javadoc")
+    from(tasks.named("dokkaHtml"))
+}
+
+publishing {
+    publications.withType(MavenPublication::class) {
+
+        artifact(javadocJar)
+
+        pom {
+            name.set("BiPaK Core")
+            description.set("Core library of BiPaK is a Kotlin multiplatform paging library.")
+            url.set("https://github.com/nicolashaan/bipak")
+            licenses {
+                license {
+                    name.set("BiPaK License")
+                    url.set("https://github.com/nicolashaan/bipak/blob/main/LICENCE.md")
+                }
+            }
+            developers {
+                developer {
+                    id.set("nicolashaan")
+                    name.set("Nicolas Haan")
+                }
+            }
+
+            scm {
+                connection.set("scm:git:github.com/nicolashaan/bipak.git")
+                developerConnection.set("scm:git:ssh://github.com/nicolashaan/bipak.git")
+                url.set("https://github.com/nicolashaan/bipak/tree/main")
+            }
+        }
+    }
 }

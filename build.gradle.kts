@@ -16,6 +16,7 @@ buildscript {
 plugins {
     id("org.jlleitschuh.gradle.ktlint") apply true
     id("org.jetbrains.dokka")
+    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 }
 
 subprojects {
@@ -24,11 +25,18 @@ subprojects {
     repositories {
         mavenCentral()
     }
-//    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
-//        debug.set(true)
-//    }
 }
 
 tasks.dokkaHtmlMultiModule.configure {
     outputDirectory.set(projectDir.resolve("docs"))
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            stagingProfileId.set(project.properties["sonatypeStagingProfileId"].toString())
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+        }
+    }
 }

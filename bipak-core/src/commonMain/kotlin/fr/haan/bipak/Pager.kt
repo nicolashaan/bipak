@@ -189,8 +189,8 @@ public class Pager<Key : Any, Value : Any>(
         }
     }
 
-    private fun assert(b: Boolean, function: () -> String) {
-        // noop
+    private fun assert(value: Boolean, lazyMessage: () -> String) {
+       if(!value) throw IllegalStateException(lazyMessage())
     }
 
     private suspend fun fetchPageAtKey(pageIndex: Int, key: Key): Deferred<InternalPage<Key, Value>> {

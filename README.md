@@ -80,7 +80,7 @@ For `RecyclerView`, [`PagingDataAdapter`](docs/bipak-android/fr.haan.bipak.andro
 It can be retrieved using this dependency:
 ```kotlin
 dependencies {
-    implementation("fr.haan.bipak:bipak-android:1.0.0-rc1")
+    implementation("fr.haan.bipak:bipak-android:0.9.0")
 }
 ```
 
@@ -126,7 +126,7 @@ Helpers are also provided for Android [Jetpack Compose](https://developer.androi
 It can be retrieved using this dependency:
 ```kotlin
 dependencies {
-    implementation("fr.haan.bipak:bipak-compose-android:1.0.0-rc1")
+    implementation("fr.haan.bipak:bipak-compose-android:0.9.0")
 }
 ```
 
