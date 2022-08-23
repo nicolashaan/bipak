@@ -25,13 +25,13 @@ support common UI patterns (MVP, MVVM, MVI...) and to be used with Kotlin Multip
 
 ## Usage
 ### Create the DataSource
-The first step is to implement a [`PagingDataSource`](./docs/bipak-core/fr.haan.bipak/-paging-data-source/index.html) by sub-classing it.
+The first step is to implement a [`PagingDataSource`](https://nicolashaan.github.io/bipak/bipak-core/fr.haan.bipak/-paging-data-source/index.html) by sub-classing it.
 It has 2 types parameters: `Key` and `Value`
 `Key` is the type used to identify a page (often an Int for a page index) and the value is the type of the data in the list.
 
-The [`load()`](./docs/bipak-core/fr.haan.bipak/-paging-data-source/load.html) method has to do what's needed to fetch the data from a network source or a database.
-it can return a page content by returning a [`PagingDataSource.LoadResult.Page`](docs/bipak-core/fr.haan.bipak/-paging-data-source/-load-result/-page/index.html).
-In case of error, it can be exposed using [`PagingDataSource.LoadResult.Error`](docs/bipak-core/fr.haan.bipak/-paging-data-source/-load-result/-error/index.html)
+The [`load()`](https://nicolashaan.github.io/bipak/bipak-core/fr.haan.bipak/-paging-data-source/load.html) method has to do what's needed to fetch the data from a network source or a database.
+it can return a page content by returning a [`PagingDataSource.LoadResult.Page`](https://nicolashaan.github.io/bipak/bipak-core/fr.haan.bipak/-paging-data-source/-load-result/-page/index.html).
+In case of error, it can be exposed using [`PagingDataSource.LoadResult.Error`](https://nicolashaan.github.io/bipak/bipak-core/fr.haan.bipak/-paging-data-source/-load-result/-error/index.html)
 
 ```kotlin
 try {
@@ -53,7 +53,7 @@ try {
 ```
 
 ### Instantiate a Pager
-The [`Pager`](docs/bipak-core/fr.haan.bipak/-pager/index.html) will take the `PagingDataSource` previously defined and some configuration:
+The [`Pager`](https://nicolashaan.github.io/bipak/bipak-core/fr.haan.bipak/-pager/index.html) will take the `PagingDataSource` previously defined and some configuration:
 ```kotlin
 private val pager = Pager(
     scope = coroutineScope,
@@ -256,6 +256,10 @@ The name comes from contractions and puns based on this:
 *Bibliothèque de Pagination et de Cache*, french for *Paging and Cache Library*.
 First two letters of each word gives: *BiPaCa*
 And as *Ca* is pronounced like the letter *K* in french and as lot of Kotlin libraries contains a *K*, *BiPaK* was chosen.
+
+## API Reference
+
+See [API documentation](https://nicolashaan.github.io/bipak/index.html)
 
 
 Made with ❤️ at [![BAM.tech](images/bam-logo.svg)](https://www.bam.tech)
