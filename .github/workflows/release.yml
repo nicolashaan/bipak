@@ -15,7 +15,7 @@ jobs:
         # os: [macOS-latest, windows-latest, ubuntu-18.04]
 
     runs-on: ${{matrix.os}}
-    if: github.repository == 'nicolashaan/bepak'
+    if: github.repository == 'nicolashaan/bipak'
 
     steps:
       - name: Checkout the repo
