@@ -1,0 +1,51 @@
+name: Publish a release
+
+on:
+  push:
+    branches:
+      - ci-test
+    tags:
+      - '*'
+
+jobs:
+  publish_archives:
+    strategy:
+      matrix:
+        os: [macOS-latest]
+        # os: [macOS-latest, windows-latest, ubuntu-18.04]
+
+    runs-on: ${{matrix.os}}
+    if: github.repository == 'nicolashaan/bepak'
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3.4.1
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Setup gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Publish the macOS artifacts
+        if: matrix.os == 'macOS-latest'
+        env:
+        run: ./gradlew publishAllPublicationsToMavenCentralRepository --no-daemon
+#      - name: Publish the windows artifact
+#        if: matrix.os == 'windows-latest'
+#        env:
+#          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_NEXUS_USERNAME }}
+#          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_NEXUS_PASSWORD }}
+#          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.ARTIFACT_SIGNING_PRIVATE_KEY }}
+#        run: ./gradlew publishMingwX64PublicationToMavenCentralRepository publishMingwX86PublicationToMavenCentralRepository
+#      - name: Publish the linux artifact
+#        if: matrix.os == 'ubuntu-18.04'
+#        env:
+#          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_NEXUS_USERNAME }}
+#          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_NEXUS_PASSWORD }}
+#          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.ARTIFACT_SIGNING_PRIVATE_KEY }}
+#        run: ./gradlew publishLinuxX64PublicationToMavenCentralRepository
+
+env:
+  GRADLE_OPTS: -Dorg.gradle.configureondemand=true -Dorg.gradle.parallel=false -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8" -PsigningKey=${{ secrets.SIGNING_KEY }} -PsigningPassword=${{ secrets.SIGNING_PASSWORD }} -PsigningKeyId=${{ secrets.SIGNING_KEY_ID }} -PsonatypeUsername=${{ secrets.SONARTYPE_USERNAME }} -PsonatypePassword=${{ secrets.SONARTYPE_PASSWORD }} -PsonatypeStagingProfileId=${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
