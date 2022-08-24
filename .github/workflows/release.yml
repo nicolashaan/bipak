@@ -47,4 +47,4 @@ jobs:
 #        run: ./gradlew publishLinuxX64PublicationToMavenCentralRepository
 
 env:
-  GRADLE_OPTS: -Dorg.gradle.configureondemand=true -Dorg.gradle.parallel=false -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8" -PsigningKey=${{ secrets.SIGNING_KEY }} -PsigningPassword=${{ secrets.SIGNING_PASSWORD }} -PsigningKeyId=${{ secrets.SIGNING_KEY_ID }} -PsonatypeUsername=${{ secrets.SONARTYPE_USERNAME }} -PsonatypePassword=${{ secrets.SONARTYPE_PASSWORD }} -PsonatypeStagingProfileId=${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
+  GRADLE_OPTS: -Dorg.gradle.configureondemand=true -Dorg.gradle.parallel=false -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8" -PsigningKey=${{ secrets.SIGNING_KEY }} -PsigningPassword=${{ secrets.SIGNING_PASSWORD }} -PsigningKeyId=${{ secrets.SIGNING_KEY_ID }} -PsonatypeUsername=${{ secrets.SONARTYPE_USERNAME }} -PsonatypePassword="${{ secrets.SONARTYPE_PASSWORD }}" -PsonatypeStagingProfileId=${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
