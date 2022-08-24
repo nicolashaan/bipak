@@ -30,7 +30,14 @@ jobs:
 
       - name: Publish the macOS artifacts
         if: matrix.os == 'macOS-latest'
-        run: ./gradlew publishAllPublicationsToMavenCentralRepository --no-daemon
+        env:
+          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.SIGNING_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingKeyId: ${{ secrets.SIGNING_KEY_ID }}
+          ORG_GRADLE_PROJECT_sonatypeUsername: ${{ secrets.SONARTYPE_USERNAME }}
+          ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.SONARTYPE_PASSWORD }}
+          ORG_GRADLE_PROJECT_sonatypeStagingProfileId: ${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
+        run: ./gradlew publishToSonatype --no-daemon
 #      - name: Publish the windows artifact
 #        if: matrix.os == 'windows-latest'
 #        env:
@@ -47,4 +54,4 @@ jobs:
 #        run: ./gradlew publishLinuxX64PublicationToMavenCentralRepository
 
 env:
-  GRADLE_OPTS: -Dorg.gradle.configureondemand=true -Dorg.gradle.parallel=false -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8" -PsigningKey="${{ secrets.SIGNING_KEY }}" -PsigningPassword=${{ secrets.SIGNING_PASSWORD }} -PsigningKeyId=${{ secrets.SIGNING_KEY_ID }} -PsonatypeUsername=${{ secrets.SONARTYPE_USERNAME }} -PsonatypePassword="${{ secrets.SONARTYPE_PASSWORD }}" -PsonatypeStagingProfileId=${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
+  GRADLE_OPTS: -Dorg.gradle.configureondemand=true -Dorg.gradle.parallel=false -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
