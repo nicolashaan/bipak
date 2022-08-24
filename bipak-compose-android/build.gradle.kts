@@ -69,6 +69,10 @@ version = project.properties["VERSION_NAME"] ?: "SNAPSHOT"
 group = "fr.haan.bipak"
 
 signing {
+    val signingKeyId: String? by project
+    val signingKey: String? by project
+    val signingPassword: String? by project
+    useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
     sign(publishing.publications)
 }
 
