@@ -72,7 +72,7 @@ public class Pager<Key : Any, Value : Any>(
             .onEach { viewEvent ->
                 pagingDebugLog("Pager: received: ${viewEvent::class.simpleName}")
                 if (viewEvent is PagingViewEvent.Terminate) {
-                    // This prevent terminating again when re-subscribing
+                    // This prevents terminating again when re-subscribing
                     eventFlow.resetReplayCache()
                 }
             }
