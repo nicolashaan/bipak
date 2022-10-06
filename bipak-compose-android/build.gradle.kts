@@ -6,11 +6,6 @@ plugins {
     id("signing")
 }
 
-repositories {
-    mavenCentral()
-    google()
-}
-
 android {
     compileSdk = Versions.androidCompileSdk
     namespace = "fr.haan.bipak.compose.android"
