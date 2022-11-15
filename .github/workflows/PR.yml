@@ -2,16 +2,14 @@ name: Test
 
 on:
   pull_request:
-    paths-ignore:
-      - 'docs/**'
-      - '*.md'
 
 
 jobs:
   run_tests:
     strategy:
       matrix:
-        os: [macOS-latest, ubuntu-18.04]
+#        os: [macOS-latest, ubuntu-18.04]
+        os: [macOS-latest]
 
     runs-on: ${{matrix.os}}
     if: github.repository == 'nicolashaan/bipak'
