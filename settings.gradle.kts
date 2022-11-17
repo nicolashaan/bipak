@@ -19,15 +19,15 @@ pluginManagement {
         id("signing")
     }
 }
-
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
-    repositories {
-        mavenCentral()
-        google()
-        gradlePluginPortal()
-    }
-}
+// Doesn't seem to work at this moment, fallback to declaring in subprojects {}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+//    repositories {
+//        mavenCentral()
+//        google()
+//        gradlePluginPortal()
+//    }
+//}
 
 rootProject.name = "bipak-project"
 include(":bipak-core")
