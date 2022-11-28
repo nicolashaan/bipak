@@ -1,0 +1,35 @@
+name: Test
+
+on:
+  pull_request:
+
+
+jobs:
+  run_tests:
+    strategy:
+      matrix:
+        os: [macOS-latest, ubuntu-18.04]
+
+    runs-on: ${{matrix.os}}
+    if: github.repository == 'nicolashaan/bipak'
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3.4.1
+        with:
+          distribution: 'zulu'
+          java-version: 11
+      - name: Setup gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: Run the macOS tests and build Android sample
+        if: matrix.os == 'macOS-latest'
+        run: ./gradlew testDebugUnitTest samples:bipak-sample-android:assembleDebug
+      - name: Run the Linux tests and build Android sample
+        if: matrix.os == 'ubuntu-18.04'
+        run: ./gradlew testDebugUnitTest samples:bipak-sample-android:assembleDebug
+
+env:
+  GRADLE_OPTS: -Dorg.gradle.configureondemand=true -Dorg.gradle.parallel=false -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"

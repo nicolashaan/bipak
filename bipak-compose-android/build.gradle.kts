@@ -6,11 +6,6 @@ plugins {
     id("signing")
 }
 
-repositories {
-    mavenCentral()
-    google()
-}
-
 android {
     compileSdk = Versions.androidCompileSdk
     namespace = "fr.haan.bipak.compose.android"
@@ -44,7 +39,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
+        kotlinCompilerExtensionVersion = "1.3.0"
     }
     publishing {
         singleVariant("release") {
@@ -58,10 +53,10 @@ dependencies {
 
     implementation("androidx.core:core-ktx:${Versions.androidxCore}")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutinesVersion}")
-    implementation("androidx.appcompat:appcompat:1.4.2")
-    implementation("com.google.android.material:material:1.6.1")
+    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("com.google.android.material:material:1.7.0")
 
-    implementation("androidx.compose.foundation:foundation:1.1.1")
+    implementation("androidx.compose.foundation:foundation:1.3.0")
 }
 
 
