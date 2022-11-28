@@ -11,8 +11,7 @@ jobs:
   publish_archives:
     strategy:
       matrix:
-        os: [macOS-latest]
-        # os: [macOS-latest, windows-latest, ubuntu-18.04]
+        os: [macOS-latest, windows-latest, ubuntu-18.04]
 
     runs-on: ${{matrix.os}}
     if: github.repository == 'nicolashaan/bipak'
@@ -38,20 +37,26 @@ jobs:
           ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.SONARTYPE_PASSWORD }}
           ORG_GRADLE_PROJECT_sonatypeStagingProfileId: ${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
         run: ./gradlew publishToSonatype --no-daemon
-#      - name: Publish the windows artifact
-#        if: matrix.os == 'windows-latest'
-#        env:
-#          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_NEXUS_USERNAME }}
-#          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_NEXUS_PASSWORD }}
-#          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.ARTIFACT_SIGNING_PRIVATE_KEY }}
-#        run: ./gradlew publishMingwX64PublicationToMavenCentralRepository publishMingwX86PublicationToMavenCentralRepository
-#      - name: Publish the linux artifact
-#        if: matrix.os == 'ubuntu-18.04'
-#        env:
-#          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.SONATYPE_NEXUS_USERNAME }}
-#          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.SONATYPE_NEXUS_PASSWORD }}
-#          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.ARTIFACT_SIGNING_PRIVATE_KEY }}
-#        run: ./gradlew publishLinuxX64PublicationToMavenCentralRepository
+      - name: Publish the windows artifact
+        if: matrix.os == 'windows-latest'
+        env:
+          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.SIGNING_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingKeyId: ${{ secrets.SIGNING_KEY_ID }}
+          ORG_GRADLE_PROJECT_sonatypeUsername: ${{ secrets.SONARTYPE_USERNAME }}
+          ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.SONARTYPE_PASSWORD }}
+          ORG_GRADLE_PROJECT_sonatypeStagingProfileId: ${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
+        run: ./gradlew publishMingwX64PublicationToMavenCentralRepository publishMingwX86PublicationToMavenCentralRepository
+      - name: Publish the linux artifact
+        if: matrix.os == 'ubuntu-18.04'
+        env:
+          ORG_GRADLE_PROJECT_signingKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingPassword: ${{ secrets.SIGNING_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingKeyId: ${{ secrets.SIGNING_KEY_ID }}
+          ORG_GRADLE_PROJECT_sonatypeUsername: ${{ secrets.SONARTYPE_USERNAME }}
+          ORG_GRADLE_PROJECT_sonatypePassword: ${{ secrets.SONARTYPE_PASSWORD }}
+          ORG_GRADLE_PROJECT_sonatypeStagingProfileId: ${{ secrets.SONARTYPE_STAGING_PROFILE_ID }}
+        run: ./gradlew publishLinuxX64PublicationToMavenCentralRepository
 
 env:
   GRADLE_OPTS: -Dorg.gradle.configureondemand=true -Dorg.gradle.parallel=false -Dkotlin.incremental=false -Dorg.gradle.jvmargs="-Xmx3g -XX:MaxPermSize=2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8"
