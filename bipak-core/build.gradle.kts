@@ -6,6 +6,12 @@ plugins {
     id("signing")
 }
 
+repositories {
+    mavenCentral()
+    google()
+    gradlePluginPortal()
+}
+
 kotlin {
     explicitApi()
 
@@ -47,6 +53,11 @@ kotlin {
             }
         }
     }
+
+    listOf(
+        mingwX64(),
+        linuxX64(),
+    )
 
     sourceSets {
         val commonMain by getting {

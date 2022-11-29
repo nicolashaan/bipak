@@ -9,9 +9,9 @@
 /* Begin PBXAggregateTarget section */
 		495A4C0A7AD579DAF4B1F32E07C979AA /* bipak_sample_shared-macOS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = BD9D63EED12D10A616ACA6DF923A027B /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-macOS" */;
+			buildConfigurationList = CFA0C2421E251746E77672B6DAA7C4E5 /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-macOS" */;
 			buildPhases = (
-				4825067B5972D833396EAA4FE3CF3E00 /* [CP-User] Build bipak_sample_shared */,
+				DA5D57910615082177109D0843716B31 /* [CP-User] Build bipak_sample_shared */,
 			);
 			dependencies = (
 			);
@@ -19,9 +19,9 @@
 		};
 		61FBD390FBF486C801B482C79168F5A2 /* bipak_sample_shared-iOS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9FB5BF3264BCE5715DF140C4CE8E8110 /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-iOS" */;
+			buildConfigurationList = 8ADE5182918687050611DDE9B9AD8F19 /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-iOS" */;
 			buildPhases = (
-				2ACA5B9824AC620461EE14584D7338DF /* [CP-User] Build bipak_sample_shared */,
+				BFC3D289986F0F51E375F6080F93E949 /* [CP-User] Build bipak_sample_shared */,
 			);
 			dependencies = (
 			);
@@ -350,7 +350,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2ACA5B9824AC620461EE14584D7338DF /* [CP-User] Build bipak_sample_shared */ = {
+		BFC3D289986F0F51E375F6080F93E949 /* [CP-User] Build bipak_sample_shared */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,9 +358,9 @@
 			name = "[CP-User] Build bipak_sample_shared";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "                if [ \"YES\" = \"$COCOAPODS_SKIP_KOTLIN_BUILD\" ]; then\n                  echo \"Skipping Gradle build task invocation due to COCOAPODS_SKIP_KOTLIN_BUILD environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
+			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
 		};
-		4825067B5972D833396EAA4FE3CF3E00 /* [CP-User] Build bipak_sample_shared */ = {
+		DA5D57910615082177109D0843716B31 /* [CP-User] Build bipak_sample_shared */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,7 +368,7 @@
 			name = "[CP-User] Build bipak_sample_shared";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "                if [ \"YES\" = \"$COCOAPODS_SKIP_KOTLIN_BUILD\" ]; then\n                  echo \"Skipping Gradle build task invocation due to COCOAPODS_SKIP_KOTLIN_BUILD environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
+			shellScript = "                if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n                  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \"YES\"\"\n                  exit 0\n                fi\n                set -ev\n                REPO_ROOT=\"$PODS_TARGET_SRCROOT\"\n                \"$REPO_ROOT/../../gradlew\" -p \"$REPO_ROOT\" $KOTLIN_PROJECT_PATH:syncFramework                     -Pkotlin.native.cocoapods.platform=$PLATFORM_NAME                     -Pkotlin.native.cocoapods.archs=\"$ARCHS\"                     -Pkotlin.native.cocoapods.configuration=\"$CONFIGURATION\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -445,6 +445,23 @@
 			};
 			name = Release;
 		};
+		24FC0C804BB07502BBB6CB6090055020 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C8DCF4D791FBF119197F150B513842 /* bipak_sample_shared-macOS.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
 		2F920A9DD17BD6393D848F17F0BD1681 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B3D801B3A8FFD1A5355470804E6BE55 /* Pods-BiPaK SwiftUI Sample (macOS).debug.xcconfig */;
@@ -479,23 +496,6 @@
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3C884E7811B6D1ADAFD2CE772E843F19 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E650633978760059818FEFB10B3D068 /* bipak_sample_shared-iOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -536,22 +536,40 @@
 			};
 			name = Release;
 		};
-		62ECF94C152B272355602225D1886B42 /* Debug */ = {
+		723BF2EAE59075D9FCEECA7D17623F30 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2C8DCF4D791FBF119197F150B513842 /* bipak_sample_shared-macOS.debug.xcconfig */;
+			baseConfigurationReference = 8E650633978760059818FEFB10B3D068 /* bipak_sample_shared-iOS.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				COMBINE_HIDPI_IMAGES = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		8261412F6755F2122F0540653CEC3E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5878AE9702569E52632CEDC6E230054B /* bipak_sample_shared-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
 		};
 		A067ECD2671773E9375E2CF530A050EE /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -683,7 +701,7 @@
 			};
 			name = Release;
 		};
-		AF4892B95E70F087D25E3C6095383532 /* Release */ = {
+		C17338F136FBA569F9E3E3C1B6982163 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 16BB85E7F900879821C9B7F647874789 /* bipak_sample_shared-macOS.release.xcconfig */;
 			buildSettings = {
@@ -697,24 +715,6 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11;
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		C515DB39336A646873FF4A8B84F114D5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5878AE9702569E52632CEDC6E230054B /* bipak_sample_shared-iOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -776,20 +776,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FB5BF3264BCE5715DF140C4CE8E8110 /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-iOS" */ = {
+		8ADE5182918687050611DDE9B9AD8F19 /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3C884E7811B6D1ADAFD2CE772E843F19 /* Debug */,
-				C515DB39336A646873FF4A8B84F114D5 /* Release */,
+				723BF2EAE59075D9FCEECA7D17623F30 /* Debug */,
+				8261412F6755F2122F0540653CEC3E54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD9D63EED12D10A616ACA6DF923A027B /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-macOS" */ = {
+		CFA0C2421E251746E77672B6DAA7C4E5 /* Build configuration list for PBXAggregateTarget "bipak_sample_shared-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				62ECF94C152B272355602225D1886B42 /* Debug */,
-				AF4892B95E70F087D25E3C6095383532 /* Release */,
+				24FC0C804BB07502BBB6CB6090055020 /* Debug */,
+				C17338F136FBA569F9E3E3C1B6982163 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
