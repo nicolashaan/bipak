@@ -6,6 +6,12 @@ plugins {
     id("signing")
 }
 
+repositories {
+    mavenCentral()
+    google()
+    gradlePluginPortal()
+}
+
 kotlin {
     explicitApi()
 

@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../bipak-sample-shared"
 
 SPEC CHECKSUMS:
-  bipak_sample_shared: b7a4e8dd363181f4942dc0aad4991f6bb915c426
+  bipak_sample_shared: 53edb47499cd051b9b323deffce4ff1e467ab28f
 
 PODFILE CHECKSUM: 37a412719f046548eb8981685a7f165a3e4fa640
 

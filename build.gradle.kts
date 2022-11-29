@@ -19,6 +19,12 @@ plugins {
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 }
 
+repositories {
+    mavenCentral()
+    google()
+    gradlePluginPortal()
+}
+
 subprojects {
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
 

@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.Framework.BitcodeEmbeddingMode.BIT
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("com.rickclephas.kmp.nativecoroutines") version "0.12.5-new-mm"
+    id("com.rickclephas.kmp.nativecoroutines") version "0.13.1"
 }
 
 kotlin {
@@ -53,13 +53,13 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api(project(":bipak-core"))
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.3")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.3")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
                 implementation("app.cash.turbine:turbine:0.8.0")
             }
         }
